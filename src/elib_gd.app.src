@@ -1,0 +1,8 @@
+{ application, elib_gd,
+  [{ mod, { elib_gd_app, [] } },
+   { vsn, "2.0.0" },
+   { applications, [kernel,
+                    stdlib] },
+   { description, "elib_gd" },
+   { registered, [elib_gd_drv,
+                  elib_gd_sup] }] }.

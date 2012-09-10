@@ -1,4 +1,6 @@
 elib_gd
 =======
 
-An Erlang interface to GD
+A simple Erlang interface to GD (developed and tested on FreeBSD).
+
+More will follow :)
