@@ -2,6 +2,7 @@ License (BSD)
 -------------
 
 Copyright (c) 2012 Giacomo Olgeni.
+
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
