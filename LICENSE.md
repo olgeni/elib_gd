@@ -1,7 +1,7 @@
 License (BSD)
 -------------
 
-Copyright (c) 2012 Giacomo Olgeni.
+Copyright (c) 2012 Giacomo Olgeni, Mattia Scaricabarozzi.
 
 All rights reserved.
 
