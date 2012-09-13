@@ -22,6 +22,8 @@ haven't been following changes in GD for a while.
 Todo
 ====
 
+- Move time consuming code outside the output function (from erlang-questions)
+
 - Use NIFs (back then we didn't have NIFs, only 0s and 1s).
 
 - Add some much needed documentation.
