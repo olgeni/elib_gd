@@ -304,6 +304,7 @@ static void output (ErlDrvData handle, char *buffer, ErlDrvSizeT bufferLength)
 			ERL_DRV_TUPLE, 2 };
 
 		driver_output_term (state->port, spec, sizeof (spec) / sizeof (spec[0]));
+
 		return;
 	}
 
