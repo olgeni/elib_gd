@@ -209,7 +209,7 @@ new () ->
 %% stop
 %%
 
-stop (#gd{ port = Port }) ->
+stop (#gd{ port = Port }) when is_port (Port) ->
   unlink (Port),
   port_close (Port).
 
@@ -812,7 +812,7 @@ get_font_root () ->
 %% transaction
 %%
 
-transaction (#gd{ port = Port }, Command, ParameterList) ->
+transaction (#gd{ port = Port }, Command, ParameterList) when is_port (Port) ->
   port_command (Port, term_to_binary (list_to_tuple ([Command | ParameterList]))),
   receive
     { Port, Reply } ->

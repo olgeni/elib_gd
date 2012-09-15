@@ -10,6 +10,6 @@
 %% Records
 %%====================================================================
 
--record (gd_font, { font_path,
-                    point_size,
-                    line_spacing }).
+-record (gd_font, { font_path = "" :: string (),
+                    point_size = 0.0 :: float (),
+                    line_spacing = 0.0 :: float () }).

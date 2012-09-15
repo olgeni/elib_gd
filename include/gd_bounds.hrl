@@ -10,4 +10,11 @@
 %% Records
 %%====================================================================
 
--record (gd_bounds, { ll_x, ll_y, lr_x, lr_y, ur_x, ur_y, ul_x, ul_y }).
+-record (gd_bounds, { ll_x = 0 :: non_neg_integer (),
+		      ll_y = 0 :: non_neg_integer (),
+		      lr_x = 0 :: non_neg_integer (),
+		      lr_y = 0 :: non_neg_integer (),
+		      ur_x = 0 :: non_neg_integer (),
+		      ur_y = 0 :: non_neg_integer (),
+		      ul_x = 0 :: non_neg_integer (),
+		      ul_y = 0 :: non_neg_integer () }).
