@@ -1839,8 +1839,7 @@ static void output (ErlDrvData handle, char *buffer, ErlDrvSizeT bufferLength)
 			return;
 		}
 
-		state->image[paletteImageIndex] =
-			gdImageCreatePaletteFromTrueColor (state->image[imageIndex], ditherFlag, colorsWanted);
+		state->image[paletteImageIndex] = gdImageCreatePaletteFromTrueColor (state->image[imageIndex], ditherFlag, colorsWanted);
 
 		ErlDrvTermData spec[] = {
 			ERL_DRV_PORT, driver_mk_port (state->port),
