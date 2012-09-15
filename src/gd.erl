@@ -12,7 +12,9 @@
 
 -include ("gd.hrl").
 -include ("gd_bounds.hrl").
+-include ("gd_face.hrl").
 -include ("gd_font.hrl").
+-include ("gd_font_metrics.hrl").
 
 %%====================================================================
 %% External exports
