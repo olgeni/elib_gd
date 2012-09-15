@@ -83,7 +83,7 @@ init ([]) ->
       ignore;
 
     { unix, freebsd } ->
-      ok = erl_ddll:load_driver (code_tools:priv_dir (elib_gd), atom_to_list (?DRIVER)),
+      ok = erl_ddll:load_driver (code:priv_dir (elib_gd), atom_to_list (?DRIVER)),
 
       { ok, #state{} }
   end.
