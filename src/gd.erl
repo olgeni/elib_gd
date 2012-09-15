@@ -471,7 +471,7 @@ image_set_clip (GD, ImageIndex, X1, Y1, X2, Y2) ->
 %%
 
 -spec image_get_clip (GD :: gd (), ImageIndex :: integer ()) ->
-  { 'ok', { 'gd_clip', non_neg_integer (), non_neg_integer (), non_neg_integer (), non_neg_integer () } }.
+  { 'ok', gd_clip:gd_clip () }.
 
 image_get_clip (GD, ImageIndex) ->
   transaction (GD, ?GD_IMAGE_GET_CLIP, [ImageIndex]).
