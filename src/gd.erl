@@ -488,24 +488,24 @@ image_fill_to_border (GD, ImageIndex, X, Y, BorderColor, Color) ->
 %% image_string_ft
 %%
 
-image_string_ft (GD, ImageIndex, Color, Font, Angle, X, Y, Text) ->
+image_string_ft (GD, ImageIndex, Color, Font, Angle, X, Y, String) ->
   transaction (
     GD, ?GD_IMAGE_STRING_FT,
     [ImageIndex, Color,
      gd_font:get_font_path (Font),
      float (gd_font:get_point_size (Font)),
      float (gd_font:get_line_spacing (Font)),
-     float (Angle), X, Y, Text]).
+     float (Angle), X, Y, String]).
 
 %%
 %% image_string_ft_border
 %%
 
-image_string_ft_border (GD, ImageIndex, Color, BorderColor, BorderSize, Font, Angle, X, Y, Text) ->
-  [image_string_ft (GD, ImageIndex, BorderColor, Font, Angle, X + DX, Y + DY, Text)
+image_string_ft_border (GD, ImageIndex, Color, BorderColor, BorderSize, Font, Angle, X, Y, String) ->
+  [image_string_ft (GD, ImageIndex, BorderColor, Font, Angle, X + DX, Y + DY, String)
    || { DX, DY } <- [{ BorderSize, 0 }, { -BorderSize, 0 }, { 0, BorderSize }, { 0, -BorderSize }]],
 
-  image_string_ft (GD, ImageIndex, Color, Font, Angle, X, Y, Text).
+  image_string_ft (GD, ImageIndex, Color, Font, Angle, X, Y, String).
 
 %%
 %% image_copy
