@@ -436,14 +436,14 @@ image_arc (GD, ImageIndex, CenterX, CenterY, Width, Height, InitialDegree, Final
 
 image_filled_arc (GD, ImageIndex, CenterX, CenterY, Width, Height, InitialDegree, FinalDegree, Color, Style) ->
   StyleValue =
-    lists:foldl (                               %%  _____
-      fun (X, A) ->                             %% /     \
-          fun (?GD_ARC)    -> ?GD_ARC_CONST;    %% vvvvvvv  /|__/|
-              (?GD_CHORD)  -> ?GD_CHORD_CONST;  %%    I   /O,O   |
-              (?GD_NOFILL) -> ?GD_NOFILL_CONST; %%    I /_____   |      /|/|
-              (?GD_EDGED)  -> ?GD_EDGED_CONST   %%   J|/^ ^ ^ \  |    /00  |    _//|
-          end (X) bor A                         %%    |^ ^ ^ ^ |W|   |/^^\ |   /oo |
-      end, 0, Style),                           %%     \m___m__|_|    \m_m_|   \mm_|
+    lists:foldl (
+      fun (X, A) ->
+          fun (?GD_ARC)    -> ?GD_ARC_CONST;
+              (?GD_CHORD)  -> ?GD_CHORD_CONST;
+              (?GD_NOFILL) -> ?GD_NOFILL_CONST;
+              (?GD_EDGED)  -> ?GD_EDGED_CONST
+          end (X) bor A
+      end, 0, Style),
 
   transaction (GD, ?GD_IMAGE_FILLED_ARC, [ImageIndex, CenterX, CenterY, Width, Height, InitialDegree, FinalDegree, Color, StyleValue]).
 
