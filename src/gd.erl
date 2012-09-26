@@ -205,7 +205,7 @@
   { 'ok', gd () }.
 
 new () ->
-  GD = #gd{ port = open_port ({ spawn, "gd" }, [binary]) },
+  GD = #gd{ port = open_port ({ spawn, "elib_gd_drv" }, [binary]) },
   { ok, GD }.
 
 %%
