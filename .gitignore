@@ -1,0 +1,9 @@
+.eunit
+deps
+ebin
+*.o
+*.so
+*.beam
+*.plt
+*.dump
+*.swp
