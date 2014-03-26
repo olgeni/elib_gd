@@ -1207,6 +1207,9 @@ static void output (ErlDrvData handle, char *buffer, ErlDrvSizeT bufferLength)
 			points[i].y = y;
 		}
 
+        // get the empty list at the end
+        EI_DECODE_LIST_HEADER (state->port, buffer, termIndex, count);
+
 		long color;
 
 		EI_DECODE_LONG (state->port, buffer, termIndex, color);
@@ -1253,6 +1256,9 @@ static void output (ErlDrvData handle, char *buffer, ErlDrvSizeT bufferLength)
 			points[i].y = y;
 		}
 
+        // get the empty list at the end
+        EI_DECODE_LIST_HEADER (state->port, buffer, termIndex, count);
+
 		long color;
 
 		EI_DECODE_LONG (state->port, buffer, termIndex, color);
@@ -1298,6 +1304,9 @@ static void output (ErlDrvData handle, char *buffer, ErlDrvSizeT bufferLength)
 			points[i].x = x;
 			points[i].y = y;
 		}
+
+        // get the empty list at the end
+        EI_DECODE_LIST_HEADER (state->port, buffer, termIndex, count);
 
 		long color;
 
