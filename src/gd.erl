@@ -86,6 +86,7 @@
           image_get_row_truecolor/3,
           image_get_indexed_rle/2,
           text_size/3,
+          text_size/4,
           text_width/3,
           text_height/3,
           font_metrics/2,
@@ -977,6 +978,15 @@ text_size (GD, Font, String) ->
   Height = gd_bounds:get_lr_y (NBounds),
   { ok, Width, Height }.
 
+-spec text_size(GD :: gd (), Font :: gd_font:gd_font (), String :: string (), Angle :: float()) ->
+    { 'ok', non_neg_integer (), non_neg_integer () }.
+
+text_size(GD, Font, String, Angle) ->
+    { ok, Bounds } = gd:image_string_ft (GD, -1, 0, Font, Angle, 0, 0, String),
+    Width = gd_bounds:max_x(Bounds) - gd_bounds:min_x(Bounds),
+    Height = gd_bounds:max_y(Bounds) - gd_bounds:min_y(Bounds),
+    { ok, Width, Height }.
+    
 %%
 %% text_width
 %%
