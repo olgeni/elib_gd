@@ -1208,7 +1208,8 @@ static void output (ErlDrvData handle, char *buffer, ErlDrvSizeT bufferLength)
 		}
 
         // get the empty list at the end
-        EI_DECODE_LIST_HEADER (state->port, buffer, termIndex, count);
+        long e;
+        EI_DECODE_LIST_HEADER (state->port, buffer, termIndex, e);
 
 		long color;
 
@@ -1257,7 +1258,8 @@ static void output (ErlDrvData handle, char *buffer, ErlDrvSizeT bufferLength)
 		}
 
         // get the empty list at the end
-        EI_DECODE_LIST_HEADER (state->port, buffer, termIndex, count);
+        long e;
+        EI_DECODE_LIST_HEADER (state->port, buffer, termIndex, e);
 
 		long color;
 
@@ -1306,7 +1308,8 @@ static void output (ErlDrvData handle, char *buffer, ErlDrvSizeT bufferLength)
 		}
 
         // get the empty list at the end
-        EI_DECODE_LIST_HEADER (state->port, buffer, termIndex, count);
+        long e;
+        EI_DECODE_LIST_HEADER (state->port, buffer, termIndex, e);
 
 		long color;
 
