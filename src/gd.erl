@@ -728,7 +728,7 @@ image_set_anti_aliased_dont_blend (GD, ImageIndex, Color, DontBlend) ->
 %% image_set_style
 %%
 
--spec image_set_style (GD :: gd (), ImageIndex :: integer (), Style :: integer ()) ->
+-spec image_set_style (GD :: gd (), ImageIndex :: integer (), Style :: [integer ()]) ->
   'ok'.
 
 image_set_style (GD, ImageIndex, Style) ->
