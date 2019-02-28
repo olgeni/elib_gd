@@ -1,6 +1,6 @@
 { application, elib_gd,
   [{ mod, { elib_gd_app, [] } },
-   { vsn, "2.0.0" },
+   { vsn, git },
    { applications, [kernel,
                     stdlib] },
    { description, "elib_gd" },

@@ -1,9 +1,9 @@
-.eunit
-deps
-ebin
-*.o
-*.so
 *.beam
-*.plt
+*.d
 *.dump
+*.o
+*.plt
+*.so
 *.swp
+.eunit
+_build
