@@ -1,7 +1,5 @@
 /* -*- c-file-style: "bsd"; indent-tabs-mode: t; -*- */
 
-/* $Id: elib_gd_drv.c 30386 2012-09-02 12:00:27Z olgeni $ */
-
 #include <fcntl.h>
 #include <stdio.h>
 #include <string.h>

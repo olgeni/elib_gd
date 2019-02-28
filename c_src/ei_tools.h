@@ -1,5 +1,3 @@
-// $Id: ei_tools.h 30254 2012-08-26 19:47:26Z olgeni $
-
 #ifndef EI_TOOLS
 #define EI_TOOLS
 
